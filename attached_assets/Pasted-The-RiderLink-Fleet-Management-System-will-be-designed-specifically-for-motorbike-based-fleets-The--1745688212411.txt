@@ -1,0 +1,142 @@
+The RiderLink Fleet Management System will be designed specifically for motorbike-based fleets. The system will provide comprehensive functionality for managing riders, vehicles, maintenance, GPS tracking, and administrative features. Here's a more detailed breakdown of the system:
+
+1. Core Technology Stack:
+React 18 with TypeScript: For building the front-end.
+
+React Router v6: For routing and navigation within the application.
+
+Tailwind CSS: For responsive and modern styling.
+
+Shadcn UI components: For pre-designed, customizable UI components.
+
+Supabase: Backend functionality including authentication, database, and real-time updates.
+
+Mapbox: For mapping and real-time GPS tracking.
+
+Context API: For managing app-wide state (e.g., authentication, user roles).
+
+Local storage: For persisting session data (initially, later replaced with Supabase Auth).
+
+2. User Roles & Authentication:
+Rider: Access to personal dashboard, vehicle management, documents, and profile.
+
+Fleet Supervisor: Manage fleet overview, GPS tracking, and maintenance functions.
+
+Admin: Full access to operational functions like HR, finance, and settings.
+
+Super Admin: System-wide access, tenant management, and subscription plans.
+
+Authentication:
+Email/password login with session persistence.
+
+Role-based access control and redirection.
+
+Protected routes based on user roles.
+
+3. Key Features & Pages:
+1. Layouts and Navigation:
+Admin Layout: Includes a collapsible sidebar, user info in the header, and dynamic content.
+
+Rider Layout: Simplified mobile-first layout.
+
+Super Admin Layout: Specific for managing system-wide configurations.
+
+2. Dashboard Pages:
+Admin Dashboard: Fleet statistics, real-time fleet map, vehicle status overview, and alerts.
+
+Rider Dashboard: Performance metrics, current assignment, location tracking, and upcoming schedule.
+
+Super Admin Dashboard: Tenant statistics, revenue, and system health indicators.
+
+3. Fleet Management:
+Vehicle Listing: Filtering, search, and viewing vehicle details (maintenance history, status, and fuel usage).
+
+Vehicle Assignment: Assign/release vehicles to riders with tracking of status and location.
+
+Fuel Consumption Tracking: Analytics and tracking for fuel consumption across the fleet.
+
+4. GPS Tracking:
+Real-Time Tracking: Display of vehicle locations on the map.
+
+Geofence Management: Set geofences and get alerts when vehicles enter or exit them.
+
+Speed and Idle Time Monitoring: Track vehicle speed and idling time for efficiency.
+
+5. HR Management:
+Employee Records: Manage rider profiles, leave requests, attendance, and performance.
+
+Document Management: Rider document uploads and certifications.
+
+Complaints and Training: Track employee complaints and training sessions.
+
+6. Maintenance System:
+Task Management: Schedule maintenance and track issues.
+
+Service History: Log maintenance tasks and parts used.
+
+Vehicle Inspection: Checklist for routine inspections and maintenance alerts.
+
+7. Finance Module:
+Invoicing and Payments: Issue invoices, process payments, and track financial transactions.
+
+Budget Management: Track and manage expenses, generate financial reports.
+
+Recurring Payments: Set up recurring payments for regular maintenance or services.
+
+8. Rider Features:
+Vehicle Assignment Requests: Riders can request to assign/release vehicles.
+
+GPS Clock In/Out: Riders can clock in/out via GPS.
+
+Leave and Fuel Reporting: Request leave, report fuel usage, and manage profile.
+
+9. Settings & Configuration:
+System Settings: General settings, user profile management, and branding.
+
+Role and Permission Management: Admins manage user roles and permissions.
+
+10. Advanced Features:
+Offline Functionality: Enable critical operations even without an internet connection.
+
+Data Export: Export reports in various formats (PDF, Excel).
+
+Analytics Dashboards: Interactive charts and data visualizations for fleet performance.
+
+4. UI/UX Requirements:
+Responsive Design: Ensure the system works seamlessly on all screen sizes.
+
+Dark/Light Mode: Toggle between dark and light themes.
+
+Modern and Clean Interface: Utilize Shadcn UI components for an intuitive experience.
+
+Smooth Transitions and Animations: Ensure a smooth user experience with minimal loading times.
+
+5. Database Structure:
+Supabase tables for the following:
+
+Users and profiles
+
+Vehicles (maintenance history, status)
+
+Employee records
+
+Leave requests and complaints
+
+Financial transactions and invoicing
+
+GPS location history and real-time tracking
+
+Maintenance records and service history
+
+6. Technical Implementation:
+Context Providers: For managing authentication, user roles, and app state.
+
+Reusable Components: For commonly used UI elements like buttons, forms, and cards.
+
+Real-Time Data: Use Supabase subscriptions to push updates like vehicle location changes.
+
+Error Handling: Implement error boundaries to prevent crashes.
+
+Service Workers: Enable offline functionality for essential tasks.
+
+Mapbox Integration: For real-time vehicle tracking on interactive maps.
